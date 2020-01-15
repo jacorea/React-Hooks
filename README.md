@@ -5,6 +5,7 @@ It was created using the  [Create React App] found in (https://github.com/facebo
 - React components(stateful, pure, functional, class)
 - The difference between stateless and stateful components
 - React Hooks: useState that takes destructures state, and what would have been this.setState
+- Working with List & Conditionals to make dynamic inputs
 
 ## Author
 
