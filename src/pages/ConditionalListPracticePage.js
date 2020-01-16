@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import ValidationComponent from '../praxComponents/ValidationComponent/ValidationComponent';
 import CharComponent from '../praxComponents/CharComponent/CharComponent';
-import '../App.css'
+import '../containers/App.css';
 
 export class conditionalListPracticePage extends Component {
     state = {

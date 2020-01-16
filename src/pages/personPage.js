@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import Person from '../components/Person/Person';
-import '../App.css';
-import Radium from 'radium'
+import React, { Component } from 'react';
+import Persons from '../components/Persons/Persons';
+import CockPit from '../components/CockPit//CockPit';
+import '../containers/App.css';
+
 
 
 export class personPage extends Component {
@@ -62,17 +63,8 @@ export class personPage extends Component {
       if(showPersons) {
         currentPersons = (
           <div>
-          {persons.map((person, index) => {
-          return (
-            <Person 
-              key={person.id} 
-              name={person.name} 
-              age={person.age} 
-              click={()=>this.deletePersonHandler(index)}
-              changed={(event)=> this.nameChangedHandler( event, person.id)} /> )
-          } 
-        )}
-        </div>
+            <Persons persons={persons} clicked={this.deletePersonHandler} changed={this.nameChangedHandler} />
+          </div>
       )
         style.backgroundColor = 'red';
         style[':hover'] = {
@@ -80,23 +72,13 @@ export class personPage extends Component {
           color: 'black'
         }
     }
-
-    const classes = [];
-    if (this.state.persons.length <= 2) {
-      classes.push('red');
-    }
-    if (this.state.persons.length <=1) {
-      classes.push('bold');
-    }
-
     return (
       <div className="App">
-        <p className={classes.join(' ')}>I'm a React App</p>
-        <button style={style} onClick={this.togglePersonHandler} >Toggle Persons</button>
+        <CockPit showPersons={showPersons} persons={persons} click={this.togglePersonHandler}  />
         {currentPersons}
       </div>
     )
   }
 }
 
-export default Radium(personPage);
+export default personPage;
