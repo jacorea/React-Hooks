@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-// import PersonPage from './pages/personPage';
-import CondListPrax from './pages/ConditionalListPracticePage';
+import PersonPage from './pages/personPage';
+// import CondListPrax from './pages/ConditionalListPracticePage';
 // import Person from './components/Person/Person';
 // import UserOutput from './components/UserOutput/UserOutput';
 // import UserInput from './components/UserInput/UserInput';
@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <CondListPrax />
+        <PersonPage />
       </div>
     )  
   }
